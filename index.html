@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>Web Viz</title>
+     <meta charset="utf-8">
+     <meta name="viewport", content="width=device-width, initial.scale=1, shrink-to-fit=no">
+     <meta http-equiv = "x-ua-compatible" content="ie-edge">
+     <title>CSS Stylesheets with Relative Paths</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+ </head> 
+ 
+ <body>
+
+  <div class="container-fluid"> 
+<!-- Add a border -->
+    <span class="border-0">
+        <!-- Add a title page and a square-->
+        <div class="container-fluid">
+            <div class="p-3 mb-2 bg-info text-white">
+             <header>
+            <h1 class="display-1">Web Visualization Dashboard </h1>
+            </header>
+            </div>
+        </div>
+        <!-- End the title page and a square-->
+        <!-- Define the color for the rest of the page-->
+        <div class="p-3 mb-2 bg-light text-dark">
+        <!-- Navbar content -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\index.html">Home</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+           <ul class="navbar-nav">
+             <li class="nav-item active">
+              <a class="nav-link" href="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\data.html">Data <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\comparison.html">Comparison</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\Temperature.html">Temperature</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\Humidity.html">Humidity</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\Cloudiness.html">Cloudiness</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\windspeed.html">Wind Speed</a>
+            </li>
+            
+           </ul>
+          </div>
+        </nav>
+        <!-- End Navbar content -->
+        <!--         -->
+        <!--         -->
+        <!-- Start intro paragraph here start home page -->
+        <hr>
+        <article>
+          <p class="text-justify">The purpose of this project is to answer the question: What's the weather like as we approach the equator? 
+            Through this page the weather of at least 500 cities across the world of varying distance from the equator is  analyzed.
+            Data is retrieved from OpenweatherMap API, and the city name is obtained form the Python module citipy</p>
+        </article>
+        <!-- End intro paragraph -->
+        <hr>
+        <!-- Divide into a grid of two columns -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col">
+              <!--first column-->
+              <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img style='float:left;width:200px;height:200px; margin-right:10px;' src="WebVisualizations\assets\images\Fig1.png" alt="Latitude" />
+                        <p class="text-justify">In <a href="http://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/latitude.php">NASA's web page </a> is briefly 
+                          described how does the angle of the sun rays affect temperaure. In this page it is explained that <i>"the angle of incoming solar
+                          radiation influences seasonal temperatures of locations at different latitudes. When the sun’s rays strike Earth’s surface near 
+                          the equator, the incoming solar radiation is more direct (nearly perpendicular or closer to a 90˚ angle). 
+                          Therefore, the solar radiation is concentrated over a smaller surface area, causing warmer temperatures. At higher latitudes, 
+                          the angle of solar radiation is smaller, causing energy to be spread over a larger area of the surface and cooler temperatures.
+                          Because the angle of radiation varies depending on the latitude, surface temperatures on average are warmer at lower latitudes and
+                          cooler at higher latitudes (even though higher latitudes have more hours of daylight during the summer months)</i>".
+                          </p>
+                      
+                          <p class="text-justify"> Therefore, it is expected that temperatures near the equator (latitude = 0°) to be higher than temmperatures of cities near the poles
+                          (latitudes = 90° or -90°). Here we suppose that pollution, climate change and other features are not important determinaning 
+                          temperature (which is not true) but the analysis is kept simple.</p>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!--enf of first column-->
+            <div class="container-fluid">
+              <!--Divide this column in four spaces-->
+              <div class="row">
+                <div class="col">
+                  <a href="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\Temperature.html">
+                    <img src="WebVisualizations\assets\images\plot_1.png" alt="Temperatue" class="img-thumbnail">
+                    </a>
+                </div>
+                <div class="col">
+                  <a href="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\Humidity.html">
+                    <img src="WebVisualizations\assets\images\plot_2.png" alt="Temperatue" class="img-thumbnail">
+                    </a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <a href="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\Cloudiness.html">
+                    <img src="WebVisualizations\assets\images\plot_3.png" alt="Temperatue" class="img-thumbnail">
+                    </a>
+                </div>
+                <div class="col">
+                  <a href="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\windspeed.html">
+                    <img src="WebVisualizations\assets\images\plot_4.png" alt="Temperatue" class="img-thumbnail">
+                    </a>
+                </div>
+              </div>
+            </div>
+              <!--end of second column-->
+            </div>
+          </div>
+
+        <!-- End divide into a grid of two columns -->
+          
+         <!-- Do not erase from here to the span border:) -->
+        <!-- Close a grey square with blanck font -->
+      </div>
+        
+
+
+
+<!-- Finish Border -->
+    </span>
+  </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+ </body>
+ 
+</html>

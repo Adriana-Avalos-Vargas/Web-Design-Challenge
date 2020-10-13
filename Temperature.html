@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>Web Viz</title>
+     <meta charset="utf-8">
+     <meta name="viewport", content="width=device-width, initial.scale=1, shrink-to-fit=no">
+     <meta http-equiv = "x-ua-compatible" content="ie-edge">
+     <title>CSS Stylesheets with Relative Paths</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+ </head> 
+ 
+ <body>
+<!-- Add a border -->
+    <span class="border-0">
+        <!-- Add a title page and a square-->
+        <div class="p-3 mb-2 bg-info text-white">
+          <h1>
+          Web visualization Dashboard
+          <small class="text-muted">Temperature <i>vs</i> Latitude</small>
+          </h1>
+        </div>
+        <!-- End the title page and a square-->
+        <!-- Define the color for the rest of the page-->
+        <div class="p-3 mb-2 bg-light text-dark">
+        <!-- Navbar content -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\index.html">Home</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+           <ul class="navbar-nav">
+             <li class="nav-item active">
+              <a class="nav-link" href="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\data.html">Data <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\comparison.html">Comparison</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\Temperature.html">Temperature</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\Humidity.html">Humidity</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\Cloudiness.html">Cloudiness</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\windspeed.html">Wind Speed</a>
+            </li>
+            
+           </ul>
+          </div>
+        </nav>
+        <!-- End Navbar content -->
+        <!--         -->
+        <!--         -->
+        <!--         -->
+        <!--         -->
+        <!-- Start temperature page -->
+        <hr>
+        <article>
+          <p class="text-info">Temperature and geolocation</p>
+            <p>The next graph represents the relationship between Temperature and Latitude, the color gradient represents the longitude of each city retrieved in the data.
+            </p>
+          </article>
+        <!-- End intro paragraph -->
+        <hr>
+        <!-- Divide into a grid of two columns -->
+        <div class="container">
+          <div class="row">
+            <div class=".col-sm-6">
+            <img src="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\WebVisualizations\assets\images\plot_1.png" class="img-fluid" alt="Responsive image" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class=".col-sm-6">
+            <p class="text-justify">This plot shows that there migh be relationship between latitude and the maximum temperatue. Indeed it looks almost as an 
+                inverted U centered arround zero. It could be interpreted as the farthest from zero and closer to 90 or -90 degrees the
+                 coldest the temperature is. <br>
+                From this scatterplot it seems that there is some relationship between temperature and the latitude. Therefore, some 
+                analysis is going to be done by hemisphere. To do so, the original dataframe of weather for each city is going to be divided 
+                by latitude. Generating one dataframe with latitudes grater or equal to zero, <i>i.e.</i> cities of the Northern Hemisphere, 
+                and another one with latitudes less than cero, or cities in the Southern Hemisphere.</p>
+            </div>
+          </div>
+        </div>
+        <!-- End divide into a grid of two columns -->
+        <hr>
+        <!-- Discussion of north -->
+        <section>
+          <div class="alert alert-light" role="alert">
+            The Northern Hemisphere
+          </div>
+          <p class="text-justify">This subsection presents a linear regresión of the maximum temperature vs latitude for the northern hemisphere. This is done by using the 
+            <i>st.linregress</i> funtion from the <i>scipy</i> Python library. </p>
+
+          <!-- Divide into a grid of two columns -->
+        <div class="container">
+          <div class="row">
+            <div class=".col-sm-6">
+            <p class="text-justify">If a linear regression model is fitted to the data for Northern Hemisphere, it is observed that the greater the latitude 
+                          the smaller the temperature. This observation is reflected in the negative value of the slope. Also, the intercept might 
+                          be interpreted as the mean maximum temperature at the Equator. It is important to nothe than there are many points far 
+                          from the red line, because there is a wide variation of the temperate values, also the relationship might not be well 
+                          represented by a linear regresion as indicated by the p value of the correlation coefficient.</p>
+            </div>
+            <div class=".col-sm-6">
+            <img src="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\WebVisualizations\assets\images\plot_5.png" class="img-fluid" alt="Responsive image" class="img-fluid" alt="Responsive image">
+            </div>
+          </div>
+        </div>
+        <!-- End divide into a grid of two columns -->
+        <br>
+        <br>
+        <p class="text-justify"> In the next table the metrics of the regression for the northern hemisphere is presentend.</p>
+
+        <div class="table-responsive">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th scope="col">Metric</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Correlation index</th>
+                <td>-0.77</td>
+              </tr>
+              <tr>
+                <th scope="row">p-value</th>
+                <td>1.2E-80</td>
+              </tr>
+              <tr>
+                <th scope="row">R squared</th>
+                <td>0.59</td>
+            </tbody>
+          </table>
+        </div>
+        <!--end of north hem discusion do not erase section-->
+        </section> 
+
+                <hr>
+        <!-- Discussion of south-->
+        <section>
+          <div class="alert alert-light" role="alert">
+            The Southern Hemisphere
+          </div>
+          <p class="text-justify">This subsection presents a linear regresión of the maximum temperature vs latitude for the southern hemisphere. This is done by using the 
+            <i>st.linregress</i> funtion from the <i>scipy</i> Python library. </p>
+
+          <!-- Divide into a grid of two columns -->
+        <div class="container">
+          <div class="row">
+            <div class=".col-sm-6">
+              <img src="C:\Users\avalo\OneDrive\Documentos\tec_documentos_plataforma\tareas\tarea_9\Web-Design-Challenge\WebVisualizations\assets\images\plot_6.png" class="img-fluid" alt="Responsive image" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class=".col-sm-6">
+              <p class="text-justify">In the case of the Southern Hemisphere the linear regresion shows that the grater the latitude the 
+              greater temperature. For this regression it is observed that the slope is positive and the intercept has a similar value to
+              the one of the norther hemisphere. Therefore the max temperature in the equator is in average around 85 F. 
+              In this case there is a bigger variation of temperatures, noted in the separation between data points. Also the linear
+               regression might not be the best approach to model the temperature as a function of the latitude. Perhaps, for both 
+               hemispheres, a polinomial or log transformation might work.</p>
+            </div>
+          </div>
+        </div>
+        <!-- End divide into a grid of two columns -->
+        <br>
+        <br>
+        <p class="text-justify"> In the next table the metrics of the regression for the northern hemisphere is presentend.</p>
+
+        <div class="table-responsive">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th scope="col">Metric</th>
+                <th scope="col">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Correlation index</th>
+                <td>0.71</td>
+              </tr>
+              <tr>
+                <th scope="row">p-value</th>
+                <td>7.30E-30</td>
+              </tr>
+              <tr>
+                <th scope="row">R squared</th>
+                <td>0.50</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--end of north hem discusion do not erase section-->
+        </section>  
+
+
+        
+        
+          
+         <!-- Do not erase from here to the span border:) -->
+        <!-- Close a grey square with black font -->
+        </div>
+        
+
+
+
+<!-- Finish Border -->
+    </span>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+ </body>
+ 
+</html>
