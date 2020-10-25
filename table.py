@@ -8,7 +8,7 @@ file_to_load = "WebVisualizations/cities_weather.csv"
 cities_data = pd.read_csv(file_to_load)
 # to save as html file 
 # named as "Table" 
-cities_data.to_html("Table.htm") 
+cities_data.to_html("Table.html") 
   
 # assign it to a  
 # variable (string) 

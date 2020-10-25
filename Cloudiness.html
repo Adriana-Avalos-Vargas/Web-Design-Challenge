@@ -10,94 +10,128 @@
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
  </head> 
  
+ <!--start the body-->
  <body>
-<!-- Add a border -->
-    <span class="border-0">
+    <!--Define a fluid container that adjust to any screen size-->
+    <div class="container.fluid">
+        <!--Add another container to "center" content-->
+        <div class = "container-fluid">
+
         <!-- Add a title page and a square-->
-        <div class="p-3 mb-2 bg-info text-white">
-          <h1>
-          Web visualization Dashboard
-          <small class="text-muted">Cloudiness <i>vs</i> Latitude</small>
-          </h1>
-        </div>
+            <div class="p-3 mb-2 bg-info text-white">
+                <header>
+                    <h1 class="display-4">
+                        Web Visualization Dashboard <small class="text-muted">Cloudiness <i>vs</i> Latitude</small>
+                    </h1>
+                </header>
+            </div>
         <!-- End the title page and a square-->
-        <!-- Define the color for the rest of the page-->
-        <div class="p-3 mb-2 bg-light text-dark">
-        <!-- Navbar content -->
+
+        <!--section of navigation bar-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="index.html">Home</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-           <ul class="navbar-nav">
-             <li class="nav-item active">
-              <a class="nav-link" href="data.html">Data <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="comparison.html">Comparison</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Temperature.html">Temperature</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Humidity.html">Humidity</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Cloudiness.html">Cloudiness</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="windspeed.html">Wind Speed</a>
-            </li>
-            
-           </ul>
-          </div>
-        </nav>
-        <!-- End Navbar content -->
-        <!--         -->
-        <!--         -->
-        <!--         -->
-        <!--         -->
-        <!-- Start humidity page -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="data.html">Data</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="comparison.html">Comparisons</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Weather Variables
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="Temperature.html">Temperature</a>
+                                <a class="dropdown-item" href="Humidity.html">Humidity</a>
+                                <a class="dropdown-item" href="Cloudiness.html">Cloudiness</a>
+                                <a class="dropdown-item" href="windspeed.html">Wind Speed</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        <!--End of section of navigation bar-->
+
+        <!--Beggining of contents-->
+        <!-- Start intro paragraph here start home page -->
+        <br>
         <hr>
-        <article>
-          <p class="text-info">Cloudiness and latitude</p>
-            <p>In the following scatter plot the latitude is compared with the cloudiness (%). In this case the 
-            color gradient represents the longitude of each city retrieved in the data.
-            </p>
-          </article>
-        <!-- End intro paragraph -->
-        <hr>
-        <!-- Divide into a grid of two columns -->
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col">
-            <img src="WebVisualizations\assets\images\plot_3.png" class="img-fluid" alt="Responsive image" class="img-fluid" alt="Responsive image">
-            </div>
-            <div class="col">
-            <p class="text-justify">In this graph there are not clear paterns,
-             it is observed that a given latitude and longitude there might be a lot of diferent amounts of cloudines 
-             in the same latitude.</p>
-            </div>
-          </div>
-        </div>
-        <!-- End divide into a grid of two columns -->
+            <article>
+               <p class="text-info">Cloudiness and latitude</p>
+                <p>In the following scatter plot the latitude is compared with the cloudiness (%). In this case the 
+            color gradient represents the longitude of each city retrieved in the data.</p>
+            </article>
                 
-          
-         <!-- Do not erase from here to the span border:) -->
-        <!-- Close a grey square with black font -->
-        </div>
+        <!-- End intro paragraph -->
         
+        <hr>
 
+        <!-- Set a portfolio  -->
+            <div class="row">
+                <!--First row to contain image and text-->
+                <div class="col-md-12">
+                    <img src="WebVisualizations\assets\images\plot_3.png" style='float:left;width:400px;height:200px' class='img-fluid' />
+                        <p class="text-justify">In this graph there are not clear paterns, it is observed that a given latitude 
+                        and longitude there might be a lot of diferent amounts of cloudines in the same latitude.<br>
+                        According to <a href="https://link.springer.com/referenceworkentry/10.1007%2F0-387-30749-4_49">Bunting J.T. (1987) </a> <i>"A 
+                        cloud is an assembly of tiny water and/or ice particles in the atmosphere above the Earth's surface. The 
+                        individual cloud particles usually are too small to be resolved by the human eye unless they are magnified, 
+                        therefore, clouds tend to appear as solid forms. Cloud differs from fog only by definition, since fogs are in
+                         contact with the Earth's surface. Cloudiness or cloud cover refers to the extent to which the atmosphere is 
+                         covered by cloud and is estimated in fractions or percent. Overcast refers to near 100% cloudiness while 
+                         clearrefers to near 0% cloudiness. The term cloudiness most often describes the horizontal extent of clouds, 
+                         including all cloud altitudes as viewed from a weather station on the Earth or a satellite in space. From 
+                         either viewpoint, the observations are sensitive to the shapes, sizes, and altitudes of clouds so that 
+                         cloudiness estimates depend to some extent on the vertical structure of clouds</i>".</p>
+                </div>
+                <!-- End of row or container -->
+            </div>
+        <!-- space -->
+        <br>
+        <hr>
+        <br>
+        <!--space-->
 
+        <!-- define a style for a footer -->
+        <style>
+            .footer {
+                position: float;
+                bottom: 0;
+                width: 100%;
+                background-color: LightGray;
+                color: black;
+                text-align: center;
+            }
+        </style>
+        <!-- end definition of footer style -->
+        <!-- add a divition with class footer -->
+        <div class="footer">
+            <p>Page Designed with Bootstrap and Images created with Matplotlib by Adriana Avalos Vargas.</p>
+        </div>
+        <!-- End of footer -->
 
-<!-- Finish Border -->
-    </span>
-
-
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        
+        
+        
+        
+    <!--End  of the fluid containers, do not errase-->
+        </div>
+    </div>
+<!--End of the body do not errase-->
+    <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <!-- Always remember to call the above files first before calling the bootstrap.min.js file -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
  </body>
  
 </html>
